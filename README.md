@@ -65,5 +65,4 @@ d(n) = \sum_{i=0}^{n} n (0.5)^{\log(i)} \\
 \text{with a closed form of } \frac{n}{1 - 0.5}, \\
 d(n) = O(n)
 \end{gather}
-
 $$
