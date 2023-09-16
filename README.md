@@ -23,13 +23,13 @@ Bugs in this algorithm include:
 
 ```python
 our_bs(Arr, element, istart, istop):
-	mid_index := floor((istart + istop) / 2)
-	x := Arr[mid_index]
 	if istart >= istop:
 		the element is not in the array
+	mid_index := floor((istart + istop) / 2)
+	x := Arr[mid_index]
 	if x = element:
-		return mipoint
-	if x < element
+		return mid_index
+	if x < element:
 		return our_bs(Arr, element, midpoint + 1, istop)
 	if x > element:
 		return our_bs(Arr, element, istart, midpoint)
@@ -41,6 +41,28 @@ This algorithm runs in $O(\log n)$ because each recursive iteration cuts the dec
 
 ## Question 2
 
+```python
+def our_bs(arr, target, istart, istop):
+    # Element is not in the array -> False
+    if istart >= istop:
+        return False
+    
+    # Assigning the midpoint to the average of the start and stop indices
+    midpoint = (istart + istop) // 2
+    
+    # Assigning the value of the element at the midpoint to x
+    x = arr[midpoint]
+    
+    # This is exactly the pseudo code with variable names changed to fit the rest of the code
+    if x == target:
+        return midpoint
+    if x < target:
+        return our_bs(arr, target, midpoint + 1, istop)
+    if x > target:
+        return our_bs(arr, target, istart, midpoint)
+```
+
+![](./plot.png) 
 
 ## Question 3 
 
