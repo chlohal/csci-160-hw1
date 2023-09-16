@@ -60,9 +60,9 @@ d(n) = \sum_{i=0}^{\log(n)} \sum_{j=1}^{\frac{n}{2^{i}}} 1 \\
 d(n) = \sum_{i=0}^{\log(n)} \frac{n}{2^{i}} \\
 d(n) = \sum_{i=0}^{\log(n)} n2^{-i} \\
 d(n) = \sum_{i=0}^{\log(n)} n (0.5)^{i} \\
-d(n) = \sum_{i=0}^{n} n (0.5)^{\log(i)} \\
 \text{Since } n 0.5^{i} \text{ is a geometric series} \\
 \text{with a closed form of } \frac{n}{1 - 0.5}, \\
-d(n) = O(n)
+\lim_{ n \to \infty } \frac{d(n)}{n} = \frac{\frac{n}{1 - 0.5}}{n} = 1 \therefore \\
+\text{the tighest bound on runtime is }O(n)
 \end{gather}
 $$
