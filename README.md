@@ -64,6 +64,8 @@ def our_bs(arr, target, istart, istop):
 
 ![](./plot.png) 
 
+Our code can be found at https://github.com/chlohal/csci-160-hw1
+
 ## Question 3 
 
 Write down the math to explain why the following code takes $O(n)$ run time.
