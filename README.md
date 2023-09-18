@@ -86,7 +86,7 @@ d(n) = \sum_{i=0}^{\log(n)} n2^{-i} \\
 d(n) = \sum_{i=0}^{\log(n)} n (0.5)^{i} \\
 \text{Since } n 0.5^{i} \text{ is a geometric series} \\
 \text{with a closed form of } \frac{n}{1 - 0.5}, \\
-\lim_{ n \to \infty } \frac{d(n)}{n} = \frac{\frac{n}{1 - 0.5}}{n} = 1 \therefore \\
+\lim_{ n \to \infty } \frac{d(n)}{n} = \lim_{ n \to \infty } \frac{\frac{n}{1 - 0.5}}{n} = C \therefore \\
 \text{the tighest bound on runtime is }O(n)
 \end{gather}
 $$
