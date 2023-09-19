@@ -38,7 +38,6 @@ our_bs(Arr, element, istart, istop):
 This algorithm runs in $O(\log n)$ because each recursive iteration cuts the decision space in half. Either $\text{istart} := \text{midpoint + 1}$ or $\text{istop} := \text{midpoint}$ -- either way, the range between `istart` and `istop` is decreased by a factor of $\frac{1}{2}$
 
 
-
 ## Question 2
 
 ```python
@@ -62,7 +61,12 @@ def our_bs(arr, target, istart, istop):
         return our_bs(arr, target, istart, midpoint)
 ```
 
+We tested the time of the binary search algorithm by creating a `for` loop that looped through every integer between 1 and 1000. For every loop, we created an array of length `n`, where `n` was the current integer in the loop and chose the target with a `random.choice()` of the array. We used Python's built-in `timeit.timeit()` function in order to get the time of 10000 runs, the result of which we divided by 10000 in order to get the average time. Overall, this means we timed every array length between 1 and 1000, 10000 times each and got the average time of each run, which was then plotted on the graph.
+
 ![](./plot.png) 
+
+With time on the y-axis and size of input on the x-axis, our experimentally observed runtime (in blue) closely matches a logarithmic function (in orange). This indicates that our code runs in $O(n)$.
+
 
 Our code can be found at https://github.com/chlohal/csci-160-hw1
 
