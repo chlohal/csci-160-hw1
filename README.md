@@ -65,7 +65,7 @@ We tested the time of the binary search algorithm by creating a `for` loop that 
 
 ![](./plot.png) 
 
-With time on the y-axis and size of input on the x-axis, our experimentally observed runtime (in blue) closely matches a logarithmic function (in orange). This indicates that our code runs in $O(n)$.
+With time on the y-axis and size of input on the x-axis, our experimentally observed runtime (in blue) closely matches a logarithmic function (in orange). This indicates that our code runs in $O(\log n)$.
 
 
 Our code can be found at https://github.com/chlohal/csci-160-hw1
